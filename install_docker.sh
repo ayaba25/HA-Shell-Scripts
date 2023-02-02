@@ -13,3 +13,10 @@ sudo systemctl start docker
 sudo docker info
 adduser simon
 
+# install and configure docker on ubuntu 18.04
+###################################
+sudo apt update -y
+sudo apt install docker.io -y
+sudo systemctl start docker
+sudo systemctl enable docker.service
+sudo systemctl status docker

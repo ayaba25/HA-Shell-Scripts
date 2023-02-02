@@ -1,5 +1,5 @@
 #!/bin/bash
-# Creating a user
+# improve this scripts and add it to sudoers group.
 echo "Please enter the user name for the account you want to create!"
 read userName
 echo "The name you entered is: "  $userName

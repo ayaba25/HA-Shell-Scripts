@@ -55,13 +55,12 @@ You Created. --> Save.
 
 #6) create an S3 bucket Execute below commond in KOPS Server use unique bucket name if you get bucket name exists error.
 
-   # s3://lifesoft.local
-	aws s3 mb s3://class24b.local
+	aws s3 mb s3://lifesoft.local
 	aws s3 ls
 	
     ex:
 	S3 bucket name should be unique across AWS accounts 
-	aws s3 mb s3://simonlegah.k8s.local    s3://nubong.k8s.local
+	aws s3 mb mb s3://lifesoft.local 
      
 	Expose environment variable:
 
@@ -69,10 +68,9 @@ You Created. --> Save.
     vi .bashrc
 	
 	# Give Unique Name And S3 Bucket which you created.
-	export NAME=class24.k8s.local
-	export KOPS_STATE_STORE=s3://class24b.local
-    #export KOPS_STATE_STORE=s3://lifesoft.local
-    #export NAME=lifesoft.k8s.local
+
+    export KOPS_STATE_STORE=s3://lifesoft.local
+    export NAME=lifesoft.k8s.local
  
     source .bashrc
 	
@@ -109,4 +107,4 @@ kops create cluster --zones us-east-1a --networking weave --master-size t2.mediu
 
    kops delete cluster --name=${NAME} --state=${KOPS_STATE_STORE} --yes  
    
-====================================================================================================
+===================================================================
